@@ -246,7 +246,7 @@ namespace WhatisArray {
             //    // 입력한 수 보다 한줄 감소한 다이아몬드 출력 
             //    Console.WriteLine("대칭이 안맞습니다. 입력한 {0} 줄 보다 한줄 감소한 {1} 줄 다이아몬드 출력", 
             //        userinputRow, userinputRow -1);
-                
+
             //    int rowUp, rowDown;
             //    rowUp = userinputRow / 2;
             //    rowDown = (userinputRow / 2)-1;
@@ -344,121 +344,195 @@ namespace WhatisArray {
 
 
 
-            Random random = new Random();
+            //Random random = new Random();
 
-            int answerHund, answerTen, answerOne;
-            int answer = 0; 
+            //int answerHund, answerTen, answerOne;
+            //int answer = 0; 
 
-            while (true) {
-                answer = random.Next(0, 1000);
-                
-                answerHund = answer / 100;
-                answerTen = (answer / 10) % 10;
-                answerOne = (answer % 10);
-                bool isEqual = answerHund.Equals(answerTen) || answerHund.Equals(answerOne) || answerTen.Equals(answerOne);
+            //while (true) {
+            //    answer = random.Next(0, 1000);
 
-                if (isEqual) {
+            //    answerHund = answer / 100;
+            //    answerTen = (answer / 10) % 10;
+            //    answerOne = (answer % 10);
+            //    bool isEqual = answerHund.Equals(answerTen) || answerHund.Equals(answerOne) || answerTen.Equals(answerOne);
 
-                } else {
-                    break;
-                }
-            }
-            
-            Console.WriteLine("숫자 야구 입니다. 세자리 숫자를 맞춰보자");
+            //    if (isEqual) {
 
-            int inputAnswer = 0;
-            int inputHund, inputTen, inputOne;
+            //    } else {
+            //        break;
+            //    }
+            //}
 
-            int strikeCnt = 0;
-            int ballCnt = 0;
-            int outCnt = 0;
+            //Console.WriteLine("숫자 야구 입니다. 세자리 숫자를 맞춰보자");
 
-            Console.WriteLine("컴퓨터 설정 숫자: {0}", answer);
+            //int inputAnswer = 0;
+            //int inputHund, inputTen, inputOne;
+
+            //int strikeCnt = 0;
+            //int ballCnt = 0;
+            //int outCnt = 0;
+
+            //Console.WriteLine("컴퓨터 설정 숫자: {0}", answer);
 
 
-            for (int idx = 0; idx < 9; idx++) {
-
-                Console.Write("{0}회 숫자 입력: ", idx+1);
-                
-                int.TryParse(Console.ReadLine(), out inputAnswer);
-                inputHund = inputAnswer / 100;
-                inputTen = (inputAnswer / 10) % 10;
-                inputOne = (inputAnswer % 10);
+            //for (int idx = 0; idx < 9; idx++) {
 
 
 
-                //100자리
-                if (answerHund == inputHund) {
-                    //스트라이크
-                    strikeCnt++;
-                } else if(answerTen == inputHund) {
-                    //볼
-                    ballCnt++;
-                } else if(answerOne == inputHund) {
-                    //볼
-                    ballCnt++;
-                } else {
-                    //숫자가 없다 
-                    outCnt++;
-                }
 
-                //10자리
-                if (answerTen == inputTen) {
-                    //스트라이크
-                    strikeCnt++;
-                } else if (answerHund == inputTen) {
-                    //볼
-                    ballCnt++;
-                } else if (answerOne == inputTen) {
-                    //볼
-                    ballCnt++;
-                } else {
-                    //숫자가 없다
-                    outCnt++;
-                }
+            //    while (true) {
+            //        Console.Write("{0}회 숫자 입력: ", idx + 1);
 
-                //1자리
-                if (answerOne == inputOne) {
-                    //스트라이크
-                    strikeCnt++;
-                } else if (answerTen == inputOne) {
-                    //볼
-                    ballCnt++;
-                } else if (answerHund == inputOne) {
-                    //볼
-                    ballCnt++;
-                } else {
-                    //숫자가 없다
-                    outCnt++;
-                }
+            //        int.TryParse(Console.ReadLine(), out inputAnswer);
 
 
-                if(outCnt == 3) {
-                    Console.WriteLine("아웃 입니다.");
-                    if (idx == 8) {
-                        Console.WriteLine("게임오버.... 정답은 {0} 입니다.", answer); ;
-                    }
-                } else if (strikeCnt == 3) {
-                    Console.WriteLine("3S 입니다. 플레이어 승리!");
-                    break;
-                }else {
-                    Console.WriteLine("{0}S {1}B 입니다.", strikeCnt, ballCnt);
-                    if(idx == 8) {
-                        Console.WriteLine("게임오버.... 정답은 {0} 입니다.", answer); ;
-                    }
-                }
-                
+            //        inputHund = inputAnswer / 100;
+            //        inputTen = (inputAnswer / 10) % 10;
+            //        inputOne = (inputAnswer % 10);
 
-                outCnt = 0;
-                ballCnt = 0;
-                strikeCnt = 0;
+            //        bool isEqual = inputHund.Equals(inputTen) || inputHund.Equals(inputOne) || inputTen.Equals(inputOne);
+
+            //        if (isEqual) {
+            //            Console.WriteLine("중복수 다시 입력 하시오.");
+            //        } else {
+            //            break;
+            //        }
+            //    }
 
 
-            }
+
+            //    //100자리
+            //    if (answerHund == inputHund) {
+            //        //스트라이크
+            //        strikeCnt++;
+            //    } else if(answerTen == inputHund) {
+            //        //볼
+            //        ballCnt++;
+            //    } else if(answerOne == inputHund) {
+            //        //볼
+            //        ballCnt++;
+            //    } else {
+            //        //숫자가 없다 
+            //        outCnt++;
+            //    }
+
+
+
+
+            //    //10자리
+            //    if (answerTen == inputTen) {
+            //        //스트라이크
+            //        strikeCnt++;
+            //    } else if (answerHund == inputTen) {
+            //        //볼
+            //        ballCnt++;
+            //    } else if (answerOne == inputTen) {
+            //        //볼
+            //        ballCnt++;
+            //    } else {
+            //        //숫자가 없다
+            //        outCnt++;
+            //    }
+
+            //    //1자리
+            //    if (answerOne == inputOne) {
+            //        //스트라이크
+            //        strikeCnt++;
+            //    } else if (answerTen == inputOne) {
+            //        //볼
+            //        ballCnt++;
+            //    } else if (answerHund == inputOne) {
+            //        //볼
+            //        ballCnt++;
+            //    } else {
+            //        //숫자가 없다
+            //        outCnt++;
+            //    }
+
+
+            //    if(outCnt == 3) {
+            //        Console.WriteLine("아웃 입니다.");
+            //        if (idx == 8) {
+            //            Console.WriteLine("게임오버.... 정답은 {0} 입니다.", answer); ;
+            //        }
+            //    } else if (strikeCnt == 3) {
+            //        Console.WriteLine("3S 입니다. 플레이어 승리!");
+            //        break;
+            //    }else {
+            //        Console.WriteLine("{0}S {1}B 입니다.", strikeCnt, ballCnt);
+            //        if(idx == 8) {
+            //            Console.WriteLine("게임오버.... 정답은 {0} 입니다.", answer); ;
+            //        }
+            //    }
+
+
+            //    outCnt = 0;
+            //    ballCnt = 0;
+            //    strikeCnt = 0;
+
+
+            //}
+
+
+            /**
+             * 컬렉션 
+             * 이름 하나로 데이터 여러개를 담을 수 있는 자료구조를 컬렉션 또는 
+             * 컨테이너라고 한다. C#에서 다루는 ㅋ컬렉션은 배열, List, Dictionary등이
+             * 있다. 
+             * 
+             * 배열 
+             * 배열은 같은 종류의 데이터 들이 순차적으로 메모리에 저장되는 자료 구조이다. 각각의 데이터들은
+             * 인덱스(번호)를 사용하여 독립적으로 접근된다. 배열을 사용하면 편리하게 데이터를 모아서
+             * 관리할 수 있다. 
+             * 
+             * 배열의 특징들
+             * 1. 배열 하나에는 데이터 형식 한 종류만 보관할 수 있다. 
+             * 2. 배열은 메모리의 연속된 공간을 미리 할당하고, 이를 대괄호([])와 
+             * 0부터 시작하는 정수형 인덱스를 사용하여 접근할 수 있다. 
+             * 3. 배열을 선언할때는 new 키워드로 배열을 생성한 후 사용할 수 있다. 
+             * 4. 배열에서 값 하나는 요소 (element) 또는 항복 (item) 
+             * 으로 표현한다. 
+             * 5. 필요한 데이터 개수를 정확히 정한다면 메모리를 적게 사용하여 프로그램 크기가 작아지고
+             * 성능이 향상된다. 
+             * 
+             * 배열에는 세가지 종류가 있다. 
+             * 1차원 배열 : 배열의 첨자를 하나만 사용하는 배열 
+             * 다차원 배열: 첨자 2개 이상을 사용하는 배열 (2차원, 3차원..) 
+             * 가변(Jagged) 배열: '배열의 배열'이라고도 하며, 이름 하나로 다양한 차원의 
+             * 배열을 표현할 때 쓴다. 
+             */
+
+
+            //배열의 선언과 초기화
+            //int[] nums = new int[5] { 1, 2, 300, 400, 500 };
+
+
+
+
+            //for(int idx = 0; idx < nums.Length; idx++) {
+            //    Console.Write("{0}, ",nums[idx]);
+            //}
+
+            //foreach(int element in nums) {
+            //    Console.Write("{0}, ", element); 
+            //}
+
+            //int num1 = 1; 
+            //int num2 = 2;
+            //int num3 = 3;
+            //int num4 = 4;
+            //int num5 = 5;
+
+            //Console.WriteLine(nums);
+
+
+
+
 
 
 
             //프로그램 끝
         }
     }
-}
+}                           
