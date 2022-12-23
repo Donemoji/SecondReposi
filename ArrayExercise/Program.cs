@@ -28,13 +28,17 @@ namespace ArrayExercise {
             
             int inputIdx=0;
 
-
-            Console.Write("1. 콜라\t2. 물\t3. 스프라이트\t4. 주스\t5. 커피: ");
-            int.TryParse(Console.ReadLine(), out inputIdx);
             
 
 
-            switch(inputIdx) {
+            Console.Write("1. 콜라\t2. 물\t3. 스프라이트\t4. 주스\t5. 커피: ");
+            int.TryParse(Console.ReadLine(), out inputIdx);
+
+
+            
+
+            switch (inputIdx) {
+
 
                 case 1:
                     Console.WriteLine("{0} 이(가) 뽑혔습니다.", drinkName[0]);
@@ -59,8 +63,10 @@ namespace ArrayExercise {
 
             }
 
-
             
+
+
+
 
             Console.WriteLine();
             Console.WriteLine();
