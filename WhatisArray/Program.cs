@@ -6,8 +6,20 @@ using System.Runtime.InteropServices;
 namespace WhatisArray {
     //클래스 라는 것인데, C# 에서는 모든 요소들이 클래스 안에 있어야 한다. 
     internal class Program {
+
         //무조건 한개는 있어야 한다. -> C# 콘솔을 사용할때
         static void Main(string[] args) {
+
+            //for(int k =0 ; k<10 ; k++) {
+
+            //}
+            //k = 5;
+
+            //int b = 0; 
+            //for(b=0 ; b<10 ; b++) {
+
+            //}
+            //b = 5;
 
 
             ////3의 배수를 제외한 수 
