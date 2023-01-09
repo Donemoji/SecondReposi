@@ -16,8 +16,8 @@
             Console.WriteLine();
 
             // 반환형 전달 방식
-            int number = 1;
-            Console.WriteLine("[Main(out 전)] number {0}", number);
+            int number;
+            //Console.WriteLine("[Main(out 전)] number {0}", number);
             desc.OutTypeParam(out number);
             Console.WriteLine("[Main(out 후)] number {0}", number);
             Console.WriteLine();

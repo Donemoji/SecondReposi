@@ -79,8 +79,8 @@ namespace WhatisArray2 {
             //zagArr[0] = new int[2] { 1, 2 };
             //zagArr[1] = new int[] { 3, 4, 5 };
 
-            //for(int y = 0; y<2; y++) {
-            //    for(int x =0; x< zagArr[y].Length; x++) {
+            //for (int y = 0; y < 2; y++) {
+            //    for (int x = 0; x < zagArr[y].Length; x++) {
             //        Console.Write("{0} ", zagArr[y][x]);
             //    }
             //    Console.WriteLine();
