@@ -5,12 +5,50 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WhatIsDelegate {
+
+    public delegate void delegateFunction1();
+    public delegate int delegateFunction2(int x);
+
+
+
     internal class Delegate {
 
 
         // void 리턴타입과, 매개변수를 받지 않는 함수를 저장할 수 있는 
         // 데이터 타입을 선언한것임. 
         delegate void SayDelegate();
+
+
+        delegate int ReturnInteger(int x);
+
+        //delegate void delegateFunction1();
+        //delegate int delegateFunction2(int x);
+
+        //delegateFunction1 delegateFunction1;
+        //delegateFunction1 delegateFunction2;
+
+        //delegateFunction2 delegateFunction3;
+
+
+
+        public void Test(String msg, delegateFunction1 a, delegateFunction1 _printUserInfo, delegateFunction2 c) {
+            //delegateFunction1 = a; 
+            //delegateFunction2 = _printUserInfo;
+            //delegateFunction3 = c;
+
+            a();
+            a.Invoke(); 
+
+
+            //delegateFunction1();
+            //delegateFunction2();
+            //int k = delegateFunction3(100);
+            //Console.WriteLine(k);
+
+
+
+
+        }
 
         public void DelegateDesc() {
             
@@ -39,14 +77,30 @@ namespace WhatIsDelegate {
              *  - 대리자는 이벤트(Event)를 만들어 내는 중간 단계의 키워드로 존재한다. 
              *  
              */
+
+
             SayDelegate sayDelegate = Hi;
 
             sayDelegate.Invoke();
-            
+
+
+
+            ReturnInteger returnInteger = aaaa;
+
+            int returned = returnInteger.Invoke(10);
+
+            Console.WriteLine(returned);
+
+
         }       // DelegateDesc()
 
         public void Hi() {
             Console.WriteLine("안녕하세요?");
+        }
+
+        public int aaaa(int z) {
+            int c = 10;
+            return c + z;
         }
 
 
